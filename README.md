@@ -7,6 +7,9 @@ Security has been a burning issue for IoT devices recently and cryptographic vul
 
 **Keywords:** Information Security, Cryptography, Lightweight, IoT, FinTech, P2P Money Transactions
 
+## Publication
+* **Journal:** comming soon!
+
 ## License
 
 SHE is [MIT licensed](https://github.com/hack4tahsin/shecry/blob/main/LICENSE)

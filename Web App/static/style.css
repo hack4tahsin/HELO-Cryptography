@@ -1,0 +1,149 @@
+body {
+  background-image: url('https://images.designtrends.com/wp-content/uploads/2016/04/04115311/Horizon-Sunset-Background.jpg');
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+}
+  
+.rotate-90 {
+  -webkit-animation: rotate-90 0.5s linear forwards;
+  animation: rotate-90 0.5s linear forwards;
+}
+
+@-webkit-keyframes rotate-90 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotate-90 {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+  /* Style for the header */
+  header {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #22365d6d;
+    color: #f9fafb;
+ }
+ 
+ /* Style for the buttons */
+ button {
+    transition: all 0.3s ease-in-out;
+ }
+ 
+ button:hover {
+    transform: scale(1.05);
+ }
+ 
+ /* Style for the messages */
+ .message {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ .message-text {
+    animation: fadeIn 0.5s ease-in-out;
+ }
+ 
+ @keyframes fadeIn {
+    from {
+       opacity: 0;
+    }
+    to {
+       opacity: 1;
+    }
+ }
+
+/* Center buttons */
+
+button {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Add animation and style to buttons */
+button { /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+
+ul.my-10 li {
+  background-color: #f9fafb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  animation: fade-in 0.5s ease;
+}
+
+.message-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: #e2e8f0;
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+}
+
+.message-text::before {
+  content: '\2713  ';
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  color: #2d3748;
+  font-size: 1.2rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card{
+  background-color: #ffffff76;
+}
+textarea, input{
+  background-color: #ffffff76;
+  border-color: black;
+}

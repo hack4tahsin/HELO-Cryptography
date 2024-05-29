@@ -7,8 +7,9 @@ Security has been a burning issue for IoT devices recently and cryptographic vul
 
 **Keywords:** Information Security, Cryptography, Lightweight, IoT, FinTech, P2P Money Transactions
 
-## Publication
-* **Journal:** comming soon!
+## Publications
+* **Journal:** coming soon!
+* **Conference:** coming soon!
 
 ## License
 

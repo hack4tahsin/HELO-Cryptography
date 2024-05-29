@@ -23,7 +23,7 @@ Security has been a burning issue for IoT devices recently and cryptographic vul
 
 * **Prolong Battery Life:** As it uses minimal power, it means that there is not much pressure on the battery or power supply it uses from, hence it also means that in the long run for devices with low battery capacity.
 
-* Lower Processing Requirements:** As the complexity of the algorithm is simplified compared to other complex algorithms, the processing time is also lower in comparison to those algorithms. 
+* **Lower Processing Requirements:** As the complexity of the algorithm is simplified compared to other complex algorithms, the processing time is also lower in comparison to those algorithms. 
 
 * **Minimal Memory Use:** The SHE algorithm uses minimal memory which is effective for devices with minimal memory.
 

@@ -1,0 +1,8 @@
+Flask
+Gunicorn
+cryptography
+bcrypt
+psutil
+werkzeug
+time
+os

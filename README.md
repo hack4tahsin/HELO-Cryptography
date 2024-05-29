@@ -39,4 +39,4 @@ The SHE cryptographic system addresses numerous security issues identified durin
 
 ## License
 
-SHE is [MIT licensed](https://github.com/hack4tahsin/shecry/blob/main/LICENSE)
+SHE is [Apache 2.0 Licensed](https://github.com/hack4tahsin/shecry/blob/main/LICENSE)

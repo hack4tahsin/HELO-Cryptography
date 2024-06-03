@@ -19,13 +19,13 @@ Security has been a burning issue for IoT devices recently. Cryptographic vulner
 
 * **Platform Independent:** Our algorithm is platform independent, meaning that it runs smoothly regardless of the hardware specification due to its structure as it uses minimal computational power. 
 
-* **Reduce Power Consumption:** Since the SHE algorithm uses minimal computational resources, it also means that its power cost is also very low, which means that it does not require much power and in the long run when dealing with lots of data, the cumulative cost reduction in power will be reduced significantly. 
+* **Reduce Power Consumption:** Since the HELO algorithm uses minimal computational resources, it also means that its power cost is also very low, which means that it does not require much power and in the long run when dealing with lots of data, the cumulative cost reduction in power will be reduced significantly. 
 
 * **Prolong Battery Life:** As it uses minimal power, it means that there is not much pressure on the battery or power supply it uses from, hence it also means that in the long run for devices with low battery capacity.
 
 * **Lower Processing Requirements:** As the complexity of the algorithm is simplified compared to other complex algorithms, the processing time is also lower in comparison to those algorithms. 
 
-* **Minimal Memory Use:** The SHE algorithm uses minimal memory which is effective for devices with minimal memory.
+* **Minimal Memory Use:** The HELO algorithm uses minimal memory which is effective for devices with minimal memory.
 
 * **Faster Execution:** The algorithm executes very fast which means that it is efficient due to its minimal memory usage.
 

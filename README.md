@@ -39,4 +39,4 @@ The HELO cryptographic system addresses numerous security issues identified duri
 
 ## License
 
-HELO is [Apache 2.0 Licensed](LICENSE)
+HELO Cryptography is [Apache 2.0 Licensed](LICENSE)

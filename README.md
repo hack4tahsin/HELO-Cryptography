@@ -39,4 +39,4 @@ The HELO cryptographic system addresses numerous security issues identified duri
 
 ## License
 
-HELO is [Apache 2.0 Licensed](https://github.com/hack4tahsin/shecry/blob/main/LICENSE)
+HELO is [Apache 2.0 Licensed](LICENSE)

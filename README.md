@@ -35,8 +35,8 @@ Security has been a burning issue for IoT devices recently. Cryptographic vulner
 
 # Conclusion
 
-The SHE cryptographic system addresses numerous security issues identified during research by implementing a comprehensive and secure system that ensures there are no vulnerabilities found in many existing models. Our research paper demonstrates a multi-layered security approach that provides detailed data and access control layer security. This helps in ensuring security in the future. This multi-layer security model is able to protect data against several types of breaches and cyberattacks. Hence, to conclude, the SHE algorithm has been proven to be one of the best approaches for data security as lightweight cryptography in IoT devices for authorization, authentication, and especially for FinTech.
+The HELO cryptographic system addresses numerous security issues identified during research by implementing a comprehensive and secure system that ensures there are no vulnerabilities found in many existing models. Our research paper demonstrates a multi-layered security approach that provides detailed data and access control layer security. This helps in ensuring security in the future. This multi-layer security model is able to protect data against several types of breaches and cyberattacks. Hence, to conclude, the HELO algorithm has been proven to be one of the best approaches for data security as lightweight cryptography in IoT devices for authorization, and authentication.
 
 ## License
 
-SHE is [Apache 2.0 Licensed](https://github.com/hack4tahsin/shecry/blob/main/LICENSE)
+HELO is [Apache 2.0 Licensed](https://github.com/hack4tahsin/shecry/blob/main/LICENSE)

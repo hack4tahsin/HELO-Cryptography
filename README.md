@@ -8,6 +8,8 @@ Security has been a burning issue for IoT devices recently. Cryptographic vulner
 
 **Keywords:** Information Security, Cryptography, Lightweight, Hybrid, IoT, Big Data
 
+![HELO Cryptography](https://github.com/hack4tahsin/HELO-Cryptography/assets/54511117/0130772f-8677-4c1b-899a-8bd89b335dc3)
+
 ## Publications
 
 * **Journal:** coming soon!

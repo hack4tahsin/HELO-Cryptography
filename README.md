@@ -4,11 +4,11 @@
 
 ## Abstract
 
-Security has been a burning issue for IoT devices recently. Cryptographic vulnerabilities can lead to unauthorized access, data breaches, manipulation of device functionality, and compromise the security and privacy of both the devices and their users. Also, encryption and decryption of large amounts of data and sending them over an insecure network becomes more difficult for IoT devices because of its less computational power. As a result, this increases its runtime and decreases its performance. So, we present an innovative solution with a cryptographic system called HELO cryptography to solve this issue. This stands for Hybrid Encryption Lightweight Optimization. This system is hybridized and gives strong protection against several crucial cryptographic cyberattacks. However, our main objective is to maximize the security level of IoT devices without reducing their performance. This system is also ideal for resource-constrained devices like IoT because of its lightweight mechanism. Lastly, our approach offers top-level cryptographic security for IoT devices by ensuring integrity, authenticity, and confidentiality during the transmission of big data.
+Security has been a burning issue for IoT devices recently. Cryptographic vulnerabilities can lead to unauthorized access, data breaches, manipulation of device functionality, and compromise the security and privacy of both the devices and their users. Also, data encryption and decryption and sending them over an insecure network becomes more difficult for an IoT device because of its less computational power, especially in large data. As a result, this increases its runtime, decreases its performance, and consumes more resources. So, an innovative solution is proposed to solve this issue with a cryptographic system called HELO cryptography. This stands for “Hybrid Encryption Lightweight Optimization”. It is hybridized and gives strong protection against several crucial cryptographic cyberattacks. However, the main objective of this research is to maximize the security level of IoT devices without reducing their performance. This system is also ideal for resource-constrained devices because of its lightweight mechanism. Lastly, it offers top-level cryptographic security for IoT devices by ensuring integrity, authenticity, and confidentiality while doing P2P data transmission.
 
-**Keywords:** Information Security, Cryptography, Lightweight, Hybrid, IoT, Big Data
+**Keywords:** Information Security, Cryptography, Lightweight, Hybrid, IoT, P2P Data Transmission
 
-![HELO Cryptography](https://github.com/hack4tahsin/HELO-Cryptography/assets/54511117/0130772f-8677-4c1b-899a-8bd89b335dc3)
+![HELO Cryptography (4)](https://github.com/hack4tahsin/HELO-Cryptography/assets/54511117/145f8843-8cd3-48e1-b207-eb5d7cfc482d)
 
 ## Publications
 

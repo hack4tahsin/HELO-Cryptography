@@ -8,7 +8,7 @@ Security has been a burning issue for IoT devices recently. This includes crypto
 
 **Keywords:** Information Security, Cryptography, Lightweight, Hybrid, IoT, P2P Data Transmission
 
-![HELO Cryptography (4)](https://github.com/hack4tahsin/HELO-Cryptography/assets/54511117/145f8843-8cd3-48e1-b207-eb5d7cfc482d)
+![HELO Cryptography Logo](https://github.com/hack4tahsin/HELO-Cryptography/assets/54511117/c981428d-436d-4bde-98a6-731e70fe903a)
 
 ## Publications
 

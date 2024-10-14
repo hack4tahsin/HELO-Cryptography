@@ -13,7 +13,6 @@ Security in IoT devices has become increasingly problematic, especially due to c
 ## Publications
 
 * **Journal:** coming soon!
-* **Conference:** coming soon!
 
 ## Advantages:
 

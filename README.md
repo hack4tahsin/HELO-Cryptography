@@ -2,12 +2,6 @@
 
 ![python](https://img.shields.io/badge/Python-3.11.4-FDB515?style=for-the-badges&logo=Python) ![css](https://img.shields.io/badge/CSS-3.0.0-15d1fd?style=for-the-badges&logo=CSS) ![anaconda](https://img.shields.io/badge/Anaconda-2.4.3-00B27$?style=for-the-badges&logo=Anaconda)
 
-## Abstract
-
-Security in IoT devices has become increasingly problematic, especially due to cryptographic weaknesses that can lead to unauthorized access, data breaches, tampering with device functions, and compromised security and privacy for users and devices alike. The challenge of encrypting and decrypting data, and transmitting it over insecure networks, is exacerbated by the limited computational power of IoT devices, particularly when handling large data sets. This not only heightens security risks and increases runtime but also degrades performance and consumes more resources. To tackle this problem, a novel cryptographic system known as HELO (Hybrid Encryption Lightweight Optimization) has been introduced. This hybrid system offers robust defense against various critical cryptographic cyberattacks. The main aim of this research is to bolster the security of IoT devices without diminishing their performance. The HELO system, due to its lightweight design, is perfect for devices with limited resources, providing top-notch cryptographic security by ensuring integrity, authenticity, and confidentiality during peer-to-peer data transmission.
-
-**Keywords:** Information Security, Cryptography, Lightweight, Hybrid, IoT, P2P Data Transmission
-
 ![HELO Cryptography Logo](https://github.com/hack4tahsin/HELO-Cryptography/assets/54511117/c981428d-436d-4bde-98a6-731e70fe903a)
 
 ## Publications

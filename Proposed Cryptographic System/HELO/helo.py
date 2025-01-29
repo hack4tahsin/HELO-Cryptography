@@ -8,9 +8,14 @@ from cryptography.hazmat.primitives.poly1305 import Poly1305
 from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.exceptions import InvalidSignature
 
+# Use a flag to ensure chunk_size is only called once
+CHUNK_SIZE = None
+
 def chunk_size():
-    chunk_size = int(input("Enter chunk size: "))
-    return chunk_size
+    global CHUNK_SIZE
+    if CHUNK_SIZE is None:
+        CHUNK_SIZE = int(input("Enter chunk size: "))
+    return CHUNK_SIZE
 
 def generate_keypair():
     private_key = ec.generate_private_key(ec.SECP256R1())
@@ -54,61 +59,53 @@ def generate_token():
 def process_chunked_file_for_encryption(plaintext_file, encrypted_file, sender_shared_key, sender_private_key):
     chunked_data = chunk_size()  # Get chunk size from user input
 
+    with open(plaintext_file, 'rb') as infile:
+        plaintext = infile.read()
+
+    # Signing the plaintext before encryption
+    signature = ecdsa_sign(sender_private_key, plaintext)
+
     nonce = generate_token()
     cipher = Cipher(algorithms.ChaCha20(sender_shared_key, nonce), mode=None)
     encryptor = cipher.encryptor()
 
-    with open(plaintext_file, 'rb') as infile, open(encrypted_file, 'wb') as outfile:
+    ciphertext = encryptor.update(plaintext) + encryptor.finalize()
+    mac = generate_mac(sender_shared_key, ciphertext)
+
+    with open(encrypted_file, 'wb') as outfile:
         outfile.write(nonce)
-        while chunk := infile.read(chunked_data):
-            ciphertext = encryptor.update(chunk)
-            outfile.write(ciphertext)
-        outfile.write(encryptor.finalize())
-
-    with open(encrypted_file, 'rb') as infile:
-        ciphertext = infile.read()[16:]  # Skip the nonce
-        mac = generate_mac(sender_shared_key, ciphertext)
-
-    with open(encrypted_file, 'ab') as outfile:
+        outfile.write(ciphertext)
         outfile.write(mac)
-
-    # Signing the encrypted file
-    with open(encrypted_file, 'rb') as file:
-        ciphertext = file.read()
-
-    signature = ecdsa_sign(sender_private_key, ciphertext)
 
     with open(encrypted_file + ".sig", 'wb') as sig_file:
         sig_file.write(signature)
 
 def process_chunked_file_for_decryption(encrypted_file, decrypted_file, receiver_shared_key, sender_public_key):
-    # Verifying the signature
     with open(encrypted_file, 'rb') as file:
-        ciphertext = file.read()
+        nonce = file.read(16)
+        data = file.read()
 
-    with open(encrypted_file + ".sig", 'rb') as sig_file:
-        signature = sig_file.read()
+    ciphertext = data[:-16]
+    provided_mac = data[-16:]
 
-    if ecdsa_verify(sender_public_key, ciphertext, signature):
-        with open(encrypted_file, 'rb') as file:
-            nonce = file.read(16)
-            data = file.read()
+    if verify_mac(receiver_shared_key, ciphertext, provided_mac):
+        cipher = Cipher(algorithms.ChaCha20(receiver_shared_key, nonce), mode=None)
+        decryptor = cipher.decryptor()
 
-        ciphertext = data[:-16]
-        provided_mac = data[-16:]
+        plaintext = decryptor.update(ciphertext) + decryptor.finalize()
 
-        if verify_mac(receiver_shared_key, ciphertext, provided_mac):
-            cipher = Cipher(algorithms.ChaCha20(receiver_shared_key, nonce), mode=None)
-            decryptor = cipher.decryptor()
+        # Verifying the signature after decryption
+        with open(encrypted_file + ".sig", 'rb') as sig_file:
+            signature = sig_file.read()
 
+        if ecdsa_verify(sender_public_key, plaintext, signature):
             with open(decrypted_file, 'wb') as outfile:
-                outfile.write(decryptor.update(ciphertext))
-                outfile.write(decryptor.finalize())
+                outfile.write(plaintext)
         else:
-            print("Alert: Intruder altered the MAC address")
+            print("Alert: Signature verification failed")
             exit(1)
     else:
-        print("Alert: Signature verification failed")
+        print("Alert: Intruder altered the MAC address")
         exit(1)
 
 def multithreading_for_encryption(folder_path, encrypted_folder_path, sender_shared_key, sender_private_key):
@@ -143,8 +140,11 @@ def process_folder_for_decryption(encrypted_folder_path, decrypted_folder_path, 
     multithreading_for_decryption(encrypted_folder_path, decrypted_folder_path, receiver_shared_key, sender_public_key)
 
 async def main():
-    print("NOTE: Chunk size will be initialized as bytes by default.\nHowever, you need to convert bytes it into another unit.\n")
-    
+    global CHUNK_SIZE
+    if CHUNK_SIZE is None:
+        print("NOTE: Chunk size will be initialized as bytes by default.\nHowever, you need to convert bytes it into another unit.\n")
+        CHUNK_SIZE = int(input("Enter chunk size: "))
+
     sender_private_key, sender_public_key = generate_keypair()
     receiver_private_key, receiver_public_key = generate_keypair()
 

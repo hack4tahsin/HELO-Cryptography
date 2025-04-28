@@ -1,9 +1,9 @@
 # HELO Cryptography
 
+![python](https://img.shields.io/badge/Python-3.11.4-FDB515?style=for-the-badges&logo=Python) ![css](https://img.shields.io/badge/CSS-3.0.0-15d1fd?style=for-the-badges&logo=CSS) ![anaconda](https://img.shields.io/badge/Anaconda-2.4.3-00B27$?style=for-the-badges&logo=Anaconda)
+
 ## What is HELO?
 HELO is a lightweight and hybridized cryptographic system. This stands for "Hybrid Encryption Lightweight Optimization". It is made for robust security in IoT devices without reducing its performance. Also, it ensures integrity, authenticity, and confidentiality during the P2P data transmission.
-
-![python](https://img.shields.io/badge/Python-3.11.4-FDB515?style=for-the-badges&logo=Python) ![css](https://img.shields.io/badge/CSS-3.0.0-15d1fd?style=for-the-badges&logo=CSS) ![anaconda](https://img.shields.io/badge/Anaconda-2.4.3-00B27$?style=for-the-badges&logo=Anaconda)
 
 ![HELO Cryptography Logo](https://github.com/hack4tahsin/HELO-Cryptography/assets/54511117/c981428d-436d-4bde-98a6-731e70fe903a)
 
